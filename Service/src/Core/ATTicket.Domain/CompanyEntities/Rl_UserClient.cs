@@ -1,8 +1,9 @@
 ﻿namespace ATTicket.Domain.CompanyEntities;
-public class Rl_UserClient : Entity
+public sealed class Rl_UserClient : Entity
 {
-    public string User { get; set; }
-    public int Client { get; set; }
+    [ForeignKey("AppUser")]
+    public string AppUserId { get; set; }
+    public AppUser AppUser { get; set; }
     public int Priority { get; set; }
 }
 

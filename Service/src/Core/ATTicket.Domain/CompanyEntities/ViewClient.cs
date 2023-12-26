@@ -1,5 +1,5 @@
 ﻿namespace ATTicket.Domain.CompanyEntities;
-public class ViewClient : Entity
+public sealed class ViewClient : Entity
 {
     public string? Code { get; set; }
     public string? Title { get; set; }

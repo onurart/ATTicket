@@ -6,4 +6,110 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.9.0" />
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ATTicket.Domain\ATTicket.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\CompanyFeatures\ContractDocument\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\ContractDocument\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\ContractDocument\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\ContractDocument\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\ContractLine\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\ContractLine\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\ContractLine\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\ContractLine\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\ContractOrder\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\ContractOrder\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\ContractOrder\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\ContractOrder\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\ContractProduct\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\ContractProduct\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\ContractProduct\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\ContractProduct\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\Contract\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\Contract\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\Contract\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\Contract\Queries\Get\" />
+    <Folder Include="Features\CompanyFeatures\Department\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\Department\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\Department\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\Department\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\InComingMailSettings\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\InComingMailSettings\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\InComingMailSettings\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\InComingMailSettings\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\MailDocument\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\MailDocument\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\MailDocument\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\MailDocument\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\OutGoingMailSettings\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\OutGoingMailSettings\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\OutGoingMailSettings\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\OutGoingMailSettings\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\ProductModule\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\ProductModule\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\ProductModule\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\ProductModule\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\Product\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\Product\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\Product\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\Product\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\Rl_UserClient\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\Rl_UserClient\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\Rl_UserClient\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\Rl_UserClient\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\SubFirm\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\SubFirm\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\SubFirm\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\SubFirm\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\TicketLine\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\TicketLine\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\TicketLine\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\TicketLine\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\TicketList\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\TicketList\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\TicketList\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\TicketList\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\TicketMail\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\TicketMail\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\TicketMail\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\TicketMail\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\TicketPdfDetail\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\TicketPdfDetail\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\TicketPdfDetail\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\TicketPdfDetail\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\TicketSolution\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\TicketSolution\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\TicketSolution\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\TicketSolution\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\TicketStatu\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\TicketStatu\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\TicketStatu\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\TicketStatu\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\TicketSurvey\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\TicketSurvey\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\TicketSurvey\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\TicketSurvey\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\Ticket\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\Ticket\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\Ticket\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\Ticket\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\ViewClient\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\ViewClient\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\ViewClient\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\ViewClient\Queries\GetAll\" />
+    <Folder Include="Features\CompanyFeatures\ViewContract\Commands\Create\" />
+    <Folder Include="Features\CompanyFeatures\ViewContract\Commands\RemoveById\" />
+    <Folder Include="Features\CompanyFeatures\ViewContract\Commands\Update\" />
+    <Folder Include="Features\CompanyFeatures\ViewContract\Queries\GetAll\" />
+  </ItemGroup>
+
 </Project>

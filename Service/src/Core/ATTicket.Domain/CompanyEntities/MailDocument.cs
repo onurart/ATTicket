@@ -1,5 +1,5 @@
 ﻿namespace ATTicket.Domain.CompanyEntities;
-public class MailDocument : Entity
+public sealed  class MailDocument : Entity
 {
     public int MailId { get; set; }
     public byte[] UploadedFile { get; set; } = new byte[] { };

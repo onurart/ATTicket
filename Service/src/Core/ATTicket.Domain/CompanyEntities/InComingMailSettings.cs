@@ -1,5 +1,5 @@
 ﻿namespace ATTicket.Domain.CompanyEntities;
-public class InComingMailSettings : Entity
+public sealed class InComingMailSettings : Entity
 {
     public string HostName { get; set; }
     public int Port { get; set; }

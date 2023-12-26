@@ -1,8 +1,6 @@
 ﻿namespace ATTicket.Domain.CompanyEntities;
-public class TicketList : Entity
+public sealed class TicketList : Entity
 {
-    public TicketList(){}
-    public TicketList(string id,string appUserId):base(id){AppUserId = appUserId;}
     public int ClientId { get; set; }
     public int CreatedType { get; set; }
     public string? TicketNr { get; set; }

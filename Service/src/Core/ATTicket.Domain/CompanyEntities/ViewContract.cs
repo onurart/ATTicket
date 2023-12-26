@@ -1,5 +1,5 @@
 ﻿namespace ATTicket.Domain.CompanyEntities;
-public class ViewContract : Entity
+public sealed class ViewContract : Entity
 {
     [ForeignKey("AppUser")]
     public string AppUserId { get; set; }

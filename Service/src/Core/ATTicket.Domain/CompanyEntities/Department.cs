@@ -1,5 +1,5 @@
 ﻿namespace ATTicket.Domain.CompanyEntities;
-public class Department : Entity
+public sealed class Department : Entity
 {
     public string? DepartmentName { get; set; }
     [ForeignKey("AppUser")]

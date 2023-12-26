@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ATTicket.Domain.CompanyEntities;
 
-namespace ATTicket.Domain.CompanyEntities;
-{
-    public class SpResult
+    public sealed class SpResult:Entity
     {
-
-        public int Id { get; set; } 
-        public string  Result { get; set; }
-
+    public string  Result { get; set; }
     }
-}
+

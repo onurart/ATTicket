@@ -1,5 +1,5 @@
 ﻿namespace ATTicket.Domain.CompanyEntities;
-public class TicketPdfDetail : Entity
+public sealed class TicketPdfDetail : Entity
 {
     public string TicketNr { get; set; }
     public string PersonelName { get; set; }

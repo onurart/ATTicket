@@ -1,7 +1,9 @@
 ﻿namespace ATTicket.Domain.CompanyEntities;
-public class TicketMail : Entity
+public sealed class TicketMail : Entity
 {
+    [ForeignKey("Ticket")]
     public int TicketId { get; set; }
+    public Ticket Ticket { get; set; }
     public string? MailSubject { get; set; }
     public string? EMail { get; set; }
     public string? EMailTo { get; set; }

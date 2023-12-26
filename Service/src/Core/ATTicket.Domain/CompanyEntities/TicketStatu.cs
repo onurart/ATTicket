@@ -1,5 +1,5 @@
 ﻿namespace ATTicket.Domain.CompanyEntities;
-public class TicketStatu : Entity
+public  sealed  class TicketStatu : Entity
 {
     public string? MainStatu { get; set; }
     public string? Statu { get; set; }
