@@ -1,0 +1,2 @@
+﻿namespace ATTicket.Domain.Repositories.CompanyDbContext.InComingMailSettings;
+public interface IInComingMailSettingsQueryRepository:ICompanyDbQueryRepository<ATTicket.Domain.CompanyEntities.InComingMailSettings>{}

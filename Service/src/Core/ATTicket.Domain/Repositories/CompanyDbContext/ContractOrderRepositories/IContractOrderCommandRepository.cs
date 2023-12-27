@@ -1,6 +1,2 @@
-﻿namespace ATTicket.Domain.Repositories.CompanyDbContext.ContractOrderRepositories
-{
-    internal interface IContractOrderCommandRepository: ICompanyDbCommandRepository<ContractOrder>
-    {
-    }
-}
+﻿namespace ATTicket.Domain.Repositories.CompanyDbContext.ContractOrderRepositories;
+public interface IContractOrderCommandRepository: ICompanyDbCommandRepository<ContractOrder>{}

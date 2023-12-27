@@ -1,0 +1,2 @@
+﻿namespace ATTicket.Domain.Repositories.CompanyDbContext.RlUserClient;
+public interface IRl_UserClientQuertResponse:ICompanyDbQueryRepository<Rl_UserClient>{}

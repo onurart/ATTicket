@@ -1,0 +1,2 @@
+﻿namespace ATTicket.Domain.Repositories.CompanyDbContext.TicketMail;
+public interface ITicketMailCommandRepository:ICompanyDbCommandRepository<ATTicket.Domain.CompanyEntities.TicketMail>{}

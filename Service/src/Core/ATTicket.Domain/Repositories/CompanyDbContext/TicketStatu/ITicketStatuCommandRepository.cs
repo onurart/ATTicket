@@ -1,0 +1,2 @@
+﻿namespace ATTicket.Domain.Repositories.CompanyDbContext.TicketStatu;
+public interface ITicketStatuCommandRepository:ICompanyDbCommandRepository<ATTicket.Domain.CompanyEntities.TicketStatu>{}

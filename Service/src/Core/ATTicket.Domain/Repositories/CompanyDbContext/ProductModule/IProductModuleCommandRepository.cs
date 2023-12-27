@@ -1,0 +1,3 @@
+﻿namespace ATTicket.Domain.Repositories.CompanyDbContext.ProductModule;
+public interface IProductModuleCommandRepository:ICompanyDbCommandRepository<ATTicket.Domain.CompanyEntities.ProductModule>{
+}

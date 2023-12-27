@@ -1,8 +1,2 @@
-﻿using MediatR;
-
-namespace ATTicket.Application.Messaging
-{
-    public interface ICommand<out TResponse>:IRequest<TResponse>
-    {
-    }
-}
+﻿namespace ATTicket.Application.Messaging;
+public interface ICommand<out TResponse>:IRequest<TResponse>{}

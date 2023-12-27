@@ -1,0 +1,2 @@
+﻿namespace ATTicket.Domain.Repositories.CompanyDbContext.ViewContract;
+public interface IViewContractCommandRepository:ICompanyDbCommandRepository<ATTicket.Domain.CompanyEntities.ViewContract>{}

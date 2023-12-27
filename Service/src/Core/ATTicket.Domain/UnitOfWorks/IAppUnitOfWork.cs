@@ -1,6 +1,2 @@
-﻿namespace ATTicket.Domain.UnitOfWorks
-{
-    public interface IAppUnitOfWork : IUnitOfWork
-    {
-    }
-}
+﻿namespace ATTicket.Domain.UnitOfWorks;
+public interface IAppUnitOfWork : IUnitOfWork{}

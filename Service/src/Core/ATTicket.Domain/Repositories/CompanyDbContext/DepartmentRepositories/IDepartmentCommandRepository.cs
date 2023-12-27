@@ -1,0 +1,2 @@
+﻿namespace ATTicket.Domain.Repositories.CompanyDbContext.DepartmentRepositories;
+public interface IDepartmentCommandRepository:ICompanyDbCommandRepository<Department>{}

@@ -1,6 +1,2 @@
-﻿namespace ATTicket.Domain.Repositories.CompanyDbContext.ContractProductRepositories
-{
-    public interface IContractProductCommandRepository:ICompanyDbCommandRepository<ContractProduct>
-    {
-    }
-}
+﻿namespace ATTicket.Domain.Repositories.CompanyDbContext.ContractProductRepositories;
+public interface IContractProductCommandRepository:ICompanyDbCommandRepository<ContractProduct>{}

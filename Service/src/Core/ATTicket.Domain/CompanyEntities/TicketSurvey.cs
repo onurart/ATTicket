@@ -1,5 +1,5 @@
 ﻿namespace ATTicket.Domain.CompanyEntities;
-public sealed class TicketSurvey
+public sealed class TicketSurvey:Entity
 {
     public int SurveyPoint { get; set; }
     [ForeignKey("Ticket")]

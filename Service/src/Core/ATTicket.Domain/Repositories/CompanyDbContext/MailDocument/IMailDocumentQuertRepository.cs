@@ -1,0 +1,2 @@
+﻿namespace ATTicket.Domain.Repositories.CompanyDbContext.MailDocument;
+public interface IMailDocumentQuertRepository:ICompanyDbQueryRepository<ATTicket.Domain.CompanyEntities.MailDocument>{}

@@ -1,7 +1,5 @@
-﻿using ATTicket.Domain.AppEntites.Identity;
-using ATTicket.Domain.Dtos;
-namespace ATTicket.Application.Abstractions;
-internal interface IJwtProvider
+﻿namespace ATTicket.Application.Abstractions;
+public interface IJwtProvider
 {
     Task<TokenRefreshTokenDto> CreateTokenAsync(AppUser user);
 

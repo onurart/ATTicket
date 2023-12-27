@@ -1,6 +1,6 @@
 ﻿namespace ATTicket.Domain.Repositories.CompanyDbContext.ContractDocumentRepositories
 {
-    internal interface IContractDocumentQuertRepository : ICompanyDbQueryRepository<ContractDocument>
+    public interface IContractDocumentQuertRepository : ICompanyDbQueryRepository<ContractDocument>
     {
     }
 }

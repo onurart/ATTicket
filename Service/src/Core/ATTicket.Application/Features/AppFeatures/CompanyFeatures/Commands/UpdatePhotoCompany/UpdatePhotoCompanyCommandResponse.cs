@@ -1,0 +1,2 @@
+﻿namespace ATTicket.Application.Features.AppFeatures.CompanyFeatures.Commands.UpdatePhotoCompany;
+public sealed record UpdatePhotoCompanyCommandResponse(string Message = "Şirket Güncellemesi Başarıyla Tamamlandı!");

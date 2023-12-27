@@ -1,5 +1,4 @@
 ﻿namespace ATTicket.Domain.CompanyEntities;
-
 public sealed class ProductModule : Entity
 {
     [ForeignKey("Product")]
