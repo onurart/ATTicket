@@ -11,5 +11,4 @@ public sealed class ContractProduct : Entity
     public int ProductUserAmount { get; set; }
     public int FirmAmount { get; set; }
     public string Explanation { get; set; }
-    public string LicenceKey { get; set; }
 }

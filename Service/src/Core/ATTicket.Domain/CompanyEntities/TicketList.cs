@@ -1,8 +1,6 @@
 ﻿namespace ATTicket.Domain.CompanyEntities;
 public sealed class TicketList : Entity
 {
-    public int ClientId { get; set; }
-    public int CreatedType { get; set; }
     public string? TicketNr { get; set; }
     public string? TicketTitle { get; set; }
     [ForeignKey("AppUser")]

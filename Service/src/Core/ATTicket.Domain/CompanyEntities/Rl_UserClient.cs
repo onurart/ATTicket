@@ -6,4 +6,3 @@ public sealed class Rl_UserClient : Entity
     public AppUser AppUser { get; set; }
     public int Priority { get; set; }
 }
-

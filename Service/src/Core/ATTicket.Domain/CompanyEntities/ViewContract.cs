@@ -9,6 +9,5 @@ public sealed class ViewContract : Entity
     public string? Definition { get; set; }
     public DateTime BegDate { get; set; }
     public DateTime EndDate { get; set; }
-    public string Active { get; set; }
     public string? Explanation { get; set; }
 }

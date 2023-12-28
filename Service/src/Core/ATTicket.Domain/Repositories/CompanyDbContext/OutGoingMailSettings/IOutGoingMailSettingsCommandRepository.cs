@@ -1,2 +1,2 @@
 ﻿namespace ATTicket.Domain.Repositories.CompanyDbContext.OutGoingMailSettings;
-public interface IOutGoingMailSettingsCommandRepository:ICompanyDbCommandRepository<ATTicket.Domain.CompanyEntities.OutGoingMailSettings>{}
+public interface IOutGoingMailSettingsCommandRepository:ICompanyDbCommandRepository<ATTicket.Domain.CompanyEntities.OutGoingMailSettingses>{}

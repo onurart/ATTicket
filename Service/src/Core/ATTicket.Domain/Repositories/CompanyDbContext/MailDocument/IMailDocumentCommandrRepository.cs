@@ -1,2 +1,2 @@
 ﻿namespace ATTicket.Domain.Repositories.CompanyDbContext.MailDocument;
-public interface IMailDocumentCommandrRepository:ICompanyDbCommandRepository<ATTicket.Domain.CompanyEntities.MailDocument>{}
+public interface IMailDocumentCommandrRepository:ICompanyDbCommandRepository<ATTicket.Domain.CompanyEntities.MailDocuments>{}

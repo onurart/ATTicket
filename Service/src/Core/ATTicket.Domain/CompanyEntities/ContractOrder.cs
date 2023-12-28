@@ -3,8 +3,6 @@ public sealed class ContractOrder : Entity
 {
     public string OrderNo { get; set; }
     public string Docode { get; set; }
-    public string ClientCode { get; set; }
-    public string CLientDef { get; set; }
     [ForeignKey("AppUser")]
     public string AppUserId { get; set; }
     public AppUser AppUser { get; set; }

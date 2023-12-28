@@ -1,6 +1,13 @@
-﻿namespace ATTicket.Application.Services.CompanyServices
+﻿using ATTicket.Application.Features.CompanyFeatures.TicketPdfDetail.Commands.Create;
+
+namespace ATTicket.Application.Services.CompanyServices
 {
-    internal interface ITicketPdfDetail
+    public interface ITicketPdfDetail
     {
+        Task<IList<TicketPdfDetail>> GetAllAsync(string companyId);
+        Task<TicketPdfDetail> GetByIdAsync(string id, string companyId);
+        Task<TicketPdfDetail> CreateTicketPdfDetailAsync(CreateTicketPdfDetailCommand request, CancellationToken cancellationToken);
+        Task<TicketPdfDetail> RemoveByIdTicketPdfDetailAsync(string id, string companyId);
+        Task UpdateAsync(TicketPdfDetail ticketPdfDetail, string companyId);
     }
 }
