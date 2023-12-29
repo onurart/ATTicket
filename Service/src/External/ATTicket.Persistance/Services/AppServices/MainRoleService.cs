@@ -1,68 +1,49 @@
-﻿using ATTicket.Application.Features.AppFeatures.CompanyFeatures.Commands.CreateCompany;
-using ATTicket.Application.Services.AppService;
+﻿using ATTicket.Application.Services.AppService;
 using ATTicket.Domain.AppEntities;
-using ATTicket.Domain.Repositories.AppDbContext.CompanyRepositories;
+using ATTicket.Domain.Repositories.AppDbContext.MainRoleReporistories;
 using ATTicket.Domain.UnitOfWorks;
-using ATTicket.Persistance.Context;
-using AutoMapper;
-using Microsoft.EntityFrameworkCore;
 namespace ATTicket.Persistance.Services.AppServices;
-public sealed class MainRoleService/* : ICompanyService*/
+public sealed class MainRoleService : IMainRoleService
 {
-    //private readonly ICompanyCommandRepository _companyCommandRepository;
-    //private readonly ICompanyQueryRepository _companyQueryRepository;
-    //private readonly IAppUnitOfWork _appUnitOfWork;
-    //private readonly IMapper _mapper;
-    //public MainRoleService(ICompanyCommandRepository companyCommandRepository, ICompanyQueryRepository companyQueryRepository, IAppUnitOfWork appUnitOfWork, IMapper mapper)
-    //{
-    //    _companyCommandRepository = companyCommandRepository;
-    //    _companyQueryRepository = companyQueryRepository;
-    //    _appUnitOfWork = appUnitOfWork;
-    //    _mapper = mapper;
-    //}
-    //public async Task CreateCompany(CreateCompanyCommand request, CancellationToken cancellationToken)
-    //{
-    //    Company company = _mapper.Map<Company>(request);
-    //    company.Id = Guid.NewGuid().ToString();
-    //    company.DatabaseName = "ATTickets" + request.DatabaseName;
-    //    await _companyCommandRepository.AddAsync(company, cancellationToken);
-    //    await _appUnitOfWork.SaveChangesAsync(cancellationToken);
-    //}
-    //public IQueryable<Company> GetAll()
-    //{
-    //    return _companyQueryRepository.GetAll();
-    //}
-    //public async Task<Company> GetByIdAsync(string id)
-    //{
-    //    return await _companyQueryRepository.GetById(id);
-    //}
-    //public async Task<Company?> GetCompanyByName(string name, CancellationToken cancellationToken)
-    //{
-    //    return await _companyQueryRepository.GetFirstByExpiression(x => x.Name == name, cancellationToken, false);
-    //}
-    //public async Task MigrateCompanyDatabases()
-    //{
-    //    var compaies = await _companyQueryRepository.GetAll().ToListAsync();
-    //    foreach (var company in compaies)
-    //    {
-    //        var db = new CompanyDbContext(company);
-    //        db.Database.Migrate();
-    //    }
-    //}
-    //public async Task UpdateCompany(Company company, CancellationToken cancellationToken)
-    //{
-    //    _companyCommandRepository.Update(company);
-    //    await _appUnitOfWork.SaveChangesAsync(cancellationToken);
-    //}
-    //public async Task UpdatePhotoCompany(string id, string companylogo, CancellationToken cancellationToken)
-    //{
-    //    Company company = await _companyQueryRepository.GetById(id);
-    //    if (company.CompanyLogo != null)
-    //    {
-    //        company.CompanyLogo = companylogo;
-    //        company.CompanyLogo = "Test.png";
-    //        _companyCommandRepository.Update(company);
-    //        await _appUnitOfWork.SaveChangesAsync(cancellationToken);
-    //    }
-    //}
+    private readonly IMainRoleCommandRepository _mainRoleCommandRepository;
+    private readonly IMainRoleQueryRepository _mainRoleQueryRepository;
+    private readonly IAppUnitOfWork _unitOfWork;
+    public MainRoleService(IMainRoleCommandRepository mainRoleCommandRepository, IMainRoleQueryRepository mainRoleQueryRepository, IAppUnitOfWork unitOfWork)
+    {
+        _mainRoleCommandRepository = mainRoleCommandRepository;
+        _mainRoleQueryRepository = mainRoleQueryRepository;
+        _unitOfWork = unitOfWork;
+    }
+    public async Task CreateAsync(MainRole mainRole, CancellationToken cancellationToken)
+    {
+        await _mainRoleCommandRepository.AddAsync(mainRole, cancellationToken);
+        await _unitOfWork.SaveChangesAsync(cancellationToken);
+    }
+    public async Task CreateRangeAsync(List<MainRole> newMainRoles, CancellationToken cancellationToken)
+    {
+        await _mainRoleCommandRepository.AddRangeAsync(newMainRoles, cancellationToken);
+        await _unitOfWork.SaveChangesAsync(cancellationToken);
+    }
+    public IQueryable<MainRole> GetAll()
+    {
+        return _mainRoleQueryRepository.GetAll();
+    }
+    public async Task<MainRole> GetByIdAsync(string id)
+    {
+        return await _mainRoleQueryRepository.GetById(id);
+    }
+    public async Task<MainRole> GetByTitleAndCompanyId(string title, CancellationToken cancellationToken)
+    {
+        return await _mainRoleQueryRepository.GetFirstByExpiression(p => p.Title == title, cancellationToken, false);
+    }
+    public async Task RemoveByIdAsync(string id)
+    {
+        await _mainRoleCommandRepository.RemoveById(id);
+        await _unitOfWork.SaveChangesAsync();
+    }
+    public async Task UpdateAsync(MainRole mainRole)
+    {
+        _mainRoleCommandRepository.Update(mainRole);
+        await _unitOfWork.SaveChangesAsync();
+    }
 }
