@@ -1,7 +1,8 @@
 ﻿namespace ATTicket.Domain.CompanyEntities;
-public sealed class Ticket : Entity
+public sealed class Tickets : Entity
 {
     public string? TicketNr { get; set; }
+    public string ActionUrl { get; set; } = "";
     public string? TicketTitle { get; set; }
     public string? AssignedTo { get; set; }
     public string? Asistant { get; set; }
@@ -12,8 +13,6 @@ public sealed class Ticket : Entity
     public string AppUserId { get; set; }
     public AppUser AppUser { get; set; }
     public int? Contract { get; set; }
-
-
     [ForeignKey("Departments")]
     public string DepartmentId { get; set; }
     public Departments Departments { get; set; }
@@ -28,4 +27,16 @@ public sealed class Ticket : Entity
     public double? Kdv { get; set; }
     public double? Total { get; set; }
     public string? TicketTypeExplanation { get; set; }
+
+
+
+    public string Project { get; set; } = "";
+    public string Solution { get; set; } = "";
+     public string TicketDefinition { get; set; } = "";
+    public string TotalMiliseconds { get; set; } = "";
+    public bool IsPlanned { get; set; }
+    public string PlannedDate { get; set; }
+    public string PlannedStartTime { get; set; }
+    public string PlannedEndTime { get; set; }
+    public bool SolutionExists { get; set; }
 }

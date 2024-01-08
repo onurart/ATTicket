@@ -4,7 +4,7 @@ public sealed class TicketLine : Entity
     [ForeignKey("Ticket")]
 
     public int TicketId { get; set; }
-    public Ticket Ticket { get; set; }
+    public Tickets Ticket { get; set; }
     public string? AssignedTo { get; set; }
     public string? Assistant { get; set; }
     public int? LineType { get; set; }

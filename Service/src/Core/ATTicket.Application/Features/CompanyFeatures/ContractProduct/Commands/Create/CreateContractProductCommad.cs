@@ -6,4 +6,5 @@ public sealed record CreateContractProductCommad
                         string? ProductId,
                         int? ProductUserAmount,
                         int? FirmAmount,
-                        string Explanation) : ICommand<CreateContractProductCommadResponse>;
+                        string Explanation,
+                        string companyId) : ICommand<CreateContractProductCommadResponse>;

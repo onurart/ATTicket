@@ -9,4 +9,5 @@ public sealed record CreateContractCommand
               double? Amount,
               string? Currency,
               string? OrderNr,
+              string companyId,
               string? CreatedUser) : ICommand<CreateContractCommandResponse>;

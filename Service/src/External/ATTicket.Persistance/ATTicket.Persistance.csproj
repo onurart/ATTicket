@@ -10,7 +10,6 @@
     <Folder Include="Configurations\" />
     <Folder Include="Constans\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Services\CompanyServices\" />
     <Folder Include="UnitOfWorks\" />
   </ItemGroup>
 

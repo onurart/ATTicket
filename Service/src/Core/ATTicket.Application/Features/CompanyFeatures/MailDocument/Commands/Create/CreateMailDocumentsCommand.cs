@@ -4,4 +4,5 @@ public sealed record CreateMailDocumentsCommand
                          int MailId,
                          string UploadedFile,
                          string UploadedFileName,
-                         string UploadedFileContentType) : ICommand<CreateMailDocumentsCommandReponse>;
+                         string UploadedFileContentType,
+                         string companyId) : ICommand<CreateMailDocumentsCommandReponse>;

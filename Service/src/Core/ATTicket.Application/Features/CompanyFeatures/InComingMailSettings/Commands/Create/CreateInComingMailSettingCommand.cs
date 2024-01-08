@@ -7,4 +7,5 @@ public sealed record CreateInComingMailSettingCommand
                         string Password,
                         string EmailAddressTo,
                         string ExcluedEmailAddressFrom,
-                        string IncluedEmailAddressFrom):ICommand<CreateInComingMailSettingCommandRes>;
+                        string IncluedEmailAddressFrom,
+                        string companyId) : ICommand<CreateInComingMailSettingCommandRes>;

@@ -4,5 +4,6 @@ public sealed record CreateContactLineCommand
                      (int? LineNr,
                       string? InvoiceNr,
                       double? Amout,
-                      string? LineExplanation):ICommand<CreateContactLineCommandResponse>;
+                      string? LineExplanation,
+                      string companyId) :ICommand<CreateContactLineCommandResponse>;
 

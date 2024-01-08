@@ -2,7 +2,7 @@
 
 namespace ATTicket.Application.Services.CompanyServices
 {
-    public interface ITicketPdfDetail
+    public interface ITicketPdfDetailService
     {
         Task<IList<TicketPdfDetail>> GetAllAsync(string companyId);
         Task<TicketPdfDetail> GetByIdAsync(string id, string companyId);

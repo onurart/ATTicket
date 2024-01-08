@@ -2,6 +2,7 @@
 public sealed record CreateTicketCommand
                      (
                       string TicketNr,
+                      string ActionUrl,
                       string TicketTitle,
                       string AssignedTo,
                       string Asistant,
@@ -15,6 +16,9 @@ public sealed record CreateTicketCommand
                       string ClientPhone,
                       int ProductId,
                       int Module,
-                      string TicketTypeExplanation
-                     ) :ICommand<CreateTicketCommandResponse>;
+                      double Price,
+                      double Kdv,
+                      double Total,
+                      string TicketTypeExplanation,
+                      string companyId) : ICommand<CreateTicketCommandResponse>;
 

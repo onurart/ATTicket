@@ -9,4 +9,5 @@ public sealed record CreateTicketLineCommand
                         string LineMessage,
                         string Note,
                         long Duration,
-                        bool Closed):ICommand<CreateTicketLineCommandResponse>;
+                        bool Closed,
+                        string companyId) :ICommand<CreateTicketLineCommandResponse>;

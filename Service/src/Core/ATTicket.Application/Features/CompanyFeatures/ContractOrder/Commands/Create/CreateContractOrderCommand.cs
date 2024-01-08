@@ -9,5 +9,6 @@
                           double GrossTotal,
                           double LineNet,
                           string? InvoiceNo,
-                          string? Currency) : ICommand<CreateContractOrderResponse>;
+                          string? Currency,
+                          string? companyId) : ICommand<CreateContractOrderResponse>;
 }

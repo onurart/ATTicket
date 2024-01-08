@@ -13,5 +13,5 @@ public sealed record CreateTicketPdfDetailCommand
         string Price,
         string VatAmount,
         string Total,
-        string Kdv
-    ) : ICommand<CreateTicketPdfDetailCommandResponse>;
+        string Kdv,
+        string companyId):ICommand<CreateTicketPdfDetailCommandResponse>;

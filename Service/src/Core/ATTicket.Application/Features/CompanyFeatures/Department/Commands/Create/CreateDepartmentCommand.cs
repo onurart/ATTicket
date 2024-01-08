@@ -4,4 +4,5 @@ public sealed record CreateDepartmentCommand
                      string? DepartmentName,
                      string? AppUserId,
                      string? Incharge,
-                     string? Color) : ICommand<CreateDepartmentCommandReponse>;
+                     string? Color,
+                     string companyId) : ICommand<CreateDepartmentCommandReponse>;

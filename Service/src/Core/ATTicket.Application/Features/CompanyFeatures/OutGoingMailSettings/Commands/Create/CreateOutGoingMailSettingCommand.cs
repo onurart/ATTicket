@@ -4,4 +4,5 @@ public sealed record class CreateOutGoingMailSettingCommand
                   string HostName,
                   int Port,
                   string Email,
-                  string Password) :ICommand<CreateOutGoingMailSettingCommandResponse>;
+                  string Password,
+                  string companyId) :ICommand<CreateOutGoingMailSettingCommandResponse>;
